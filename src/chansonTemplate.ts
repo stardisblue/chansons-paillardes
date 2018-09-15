@@ -7,8 +7,6 @@ moment.locale('fr')
 export default function (chanson) {
     const { title, author, url, content, date, colonnes } = chanson
 
-
-
     const section =  document.createElement('section')
     section.classList.add('ma4--np')
     section.innerHTML = `<h1 class="small-caps">${title}</h1>
@@ -18,6 +16,7 @@ export default function (chanson) {
     const article = document.createElement('article')
     article.style.columnCount = colonnes
     article.innerHTML = content
+    
     section.appendChild(article)
     return section
 }

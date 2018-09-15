@@ -29,7 +29,6 @@ ready(function () {
         chanson.content = chanson.content
             .replace('\\colonneSuivante', '<div class="colonne-suivante"></div>')
             .replace(/\\sauterLigne{(\d+)}/g, (ignore, nb: number) => {
-                console.log(nb)
                 return '<br/>'.repeat(nb - 1)
             })
             .replace(/\\choeur{([^}]+)}/g, '[$1]')
