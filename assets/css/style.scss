@@ -21,10 +21,6 @@ p:first-child{
   margin-top: 0
 }
 
-@page {
-  size: A4;
-  margin: 2cm;
-}
 
 section { page-break-after: always; }
 
@@ -33,15 +29,26 @@ section:last-child { page-break-after: avoid; }
 .colonne-suivante {
   break-after: always;
   /* Pour Firefox : */
-  page-break-after: always;
+  // page-break-after: always;
   /* Pour WebKit : */
   -webkit-column-break-after: always;
 }
 
 @media print{
+
+  @page {
+    size: A4;
+    margin: 1.5cm;
+  }
+  
+
   @for $i from 1 to 9 {
     .mc-#{$i}{
       column-gap: 1em
     }
+  }
+
+  .ma4--np{
+    margin:0
   }
 }
