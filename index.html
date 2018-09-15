@@ -15,7 +15,7 @@ window.chansons = [
         {
             title: {{chanson.title | jsonify }},
             author: {{chanson.author | jsonify }},
-            url: {{chanson.url | jsonify }},
+            url: {{ site.url | append: chanson.url | jsonify }},
             content: {{chanson.content | jsonify }},
             colonnes: {{chanson.colonnes | jsonify }},
             date: {{chanson.date | jsonify }}
