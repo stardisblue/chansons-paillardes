@@ -1,0 +1,26 @@
+---
+# Feel free to add content and custom Front Matter to this file.
+# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
+
+layout: default
+title: json
+---
+
+<main class="center mw8 tc times" role="main">
+
+</main>
+<script>
+window.chansons = [
+    {% for chanson in site.chansons %}
+        {
+            title: {{chanson.title | jsonify }},
+            author: {{chanson.author | jsonify }},
+            url: {{chanson.url | jsonify }},
+            content: {{chanson.content | jsonify }},
+            colonnes: {{chanson.colonnes | jsonify }},
+            date: {{chanson.date | jsonify }}
+        }
+        {% unless forloop.last %},{% endunless %}
+    {% endfor %}
+]
+</script>

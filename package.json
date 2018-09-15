@@ -1,0 +1,21 @@
+{
+  "name": "chansons-paillardes",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "repository": "git@github.com:stardisblue/stardisblue.github.io.git",
+  "author": "stardisblue",
+  "license": "MIT",
+  "scripts": {
+    "dev": "parcel src/index.ts -d assets/js"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.9.7",
+    "typescript": "^3.0.3"
+  },
+  "dependencies": {
+    "@types/lodash": "^4.14.116",
+    "lodash": "^4.17.11",
+    "moment": "^2.22.2",
+    "pug": "^2.0.3"
+  }
+}
