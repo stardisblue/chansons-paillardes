@@ -1,4 +1,4 @@
-import _ from 'lodash'
+import forEach from 'lodash/forEach'
 import chansonTemplate from './chansonTemplate';
 
 
@@ -24,7 +24,7 @@ ready(function () {
 
     const main = document.querySelector('main')
 
-    _.forEach(chansons, (chanson) => {
+    forEach(chansons, (chanson) => {
 
         chanson.content = chanson.content
             .replace('\\colonneSuivante', '<div class="colonne-suivante"></div>')

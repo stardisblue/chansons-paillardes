@@ -15,7 +15,7 @@ export default function (chanson) {
     const section =  document.createElement('section')
     section.innerHTML = `<h1 class="small-caps">${title}</h1>
     <p class='f6 i'>${author ? `<span class="author">${author},</span>` : '' }
-    <em class="date">modifiée ${moment(date).fromNow()}</em>. <a href="${url}">permalien</a></p>`
+    <em class="date">dernière modification le ${moment(date).format('LLL')}</em>. <a href="${url}">permalien</a></p>`
     section.appendChild(article)
     return section
 }
