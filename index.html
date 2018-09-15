@@ -18,7 +18,7 @@ window.chansons = [
             url: {{ site.url | append: chanson.url | jsonify }},
             content: {{chanson.content | jsonify }},
             colonnes: {{chanson.colonnes | jsonify }},
-            date: {{chanson.date | date_to_xmlschema }}
+            date: {{ chanson.date | date_to_xmlschema | jsonify }}
         }
         {% unless forloop.last %},{% endunless %}
     {% endfor %}
