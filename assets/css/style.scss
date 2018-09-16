@@ -3,6 +3,8 @@
 
 @for $i from 1 to 9 {
   .mc-#{$i}{
+    -webkit-column-count: $i;
+    -moz-column-count: $i;
     column-count: $i
   }
 }
@@ -27,11 +29,11 @@ section { page-break-after: always; }
 section:last-child { page-break-after: avoid; }
 
 .colonne-suivante {
-  break-after: always;
+  break-after: column;
   /* Pour Firefox : */
-  // page-break-after: always;
+  // page-break-after: ;
   /* Pour WebKit : */
-  -webkit-column-break-after: always;
+  -webkit-column-break-after: column;
 }
 
 @media print{
