@@ -43,7 +43,7 @@ section:last-child { page-break-after: avoid; }
   /* Pour Firefox : */
   // page-break-after: ;
   /* Pour WebKit : */
-  -webkit-column-break-after: column;
+  -webkit-column-break-after: always;
 }
 
 @media print{
