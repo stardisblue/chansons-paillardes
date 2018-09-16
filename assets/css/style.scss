@@ -41,9 +41,10 @@ section:last-child { page-break-after: avoid; }
 .colonne-suivante {
   break-after: column;
   /* Pour Firefox : */
-  // page-break-after: ;
+  // page-break-after: column ;
   /* Pour WebKit : */
-  -webkit-column-break-after: always;
+  // causes tearing when printing
+  // -webkit-column-break-after: always;
 }
 
 @media print{
