@@ -1,6 +1,6 @@
 ---
 title: Pelot d'Hennebont
-parskip: 1.8em
+parskip: 6
 ---
 Ma chère maman je vous écris
 Que nous sommes entrés dans Paris\vspace{3mm}

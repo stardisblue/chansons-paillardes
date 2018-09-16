@@ -17,6 +17,7 @@ interface Chanson {
     date?: string
     url?: string
     colonnes?: number
+    parskip?: string
 }
 
 ready(function () {

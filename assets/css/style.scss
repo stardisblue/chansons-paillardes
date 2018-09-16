@@ -1,28 +1,29 @@
 ---
 ---
 
-@for $i from 1 to 9 {
-  .mc-#{$i}{
-    -webkit-column-count: $i;
-    -moz-column-count: $i;
-    column-count: $i
-  }
-}
-
 @for $i from 1 to 20 {
   .bl-#{$i}{
     margin-bottom: #{$i}em;
   }
 }
 
-p{
-  margin: 1.5em 0;
+article{
+  p{
+    margin-top: 1.5em;
+    margin-bottom: 0;
+  }
+
+  p:first-child{
+    margin-top: 0
+  }
 }
 
-p:first-child{
-  margin-top: 0
-}
 
+@for $i from 1 to 20 {
+  .p-mt#{$i} p{
+    margin-top: #{($i * .25)+0.25}em;
+  }
+}
 
 section { page-break-after: always; }
 
@@ -41,13 +42,6 @@ section:last-child { page-break-after: avoid; }
   @page {
     size: A4;
     margin: 1.5cm;
-  }
-  
-
-  @for $i from 1 to 9 {
-    .mc-#{$i}{
-      column-gap: 1em
-    }
   }
 
   .ma4--np{

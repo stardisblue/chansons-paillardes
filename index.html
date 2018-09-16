@@ -10,17 +10,15 @@ title: json
 
 </main>
 <script>
-window.chansons = [
-    {% for chanson in site.chansons %}
-        {
-            title: {{chanson.title | jsonify }},
-            author: {{chanson.author | jsonify }},
+    window.chansons = [
+        {% for chanson in site.chansons %}{
+            title: {{ chanson.title | jsonify }},
+            author: {{ chanson.author | jsonify }},
             url: {{ site.url | append: chanson.url | jsonify }},
-            content: {{chanson.content | jsonify }},
-            colonnes: {{chanson.colonnes | jsonify }},
-            date: {{ chanson.date | date_to_xmlschema | jsonify }}
-        }
-        {% unless forloop.last %},{% endunless %}
-    {% endfor %}
-]
+            content: {{ chanson.content | jsonify }},
+            colonnes: {{ chanson.colonnes | jsonify }},
+            date: {{ chanson.date | date_to_xmlschema | jsonify }},
+            parskip: {{ chanson.parskip | jsonify }}
+        }{% unless forloop.last %}, {% endunless %}{% endfor %}
+    ]
 </script>

@@ -1,6 +1,6 @@
 ---
 title: Fanny de Lanninon
-parskip: 8
+parskip: 6
 ---
 
 Allons sur le quai Gaydon, devant l'petit pont, chanter la chanson
