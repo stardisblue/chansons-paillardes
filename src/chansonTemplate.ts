@@ -41,6 +41,8 @@ export default function (chanson) {
 
     const article = document.createElement('article')
     article.style.columnCount = colonnes
+    article.style.webkitColumnCount = colonnes
+    
     article.classList.add('mv4--np')
     if (parskip) {
         article.classList.add('p-mt' + parskip)
