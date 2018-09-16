@@ -5,11 +5,11 @@ colonnes: 2
 
 Refrain:
 Joyeux enfant de la Bourgogne
-Je n'ai jamais eu de quignon \choeur{non, non, non, non!}
+Je n'ai jamais eu de quignon [non, non, non, non!]
 Quand je vois rougir ma trogne
 Je suis fier d'être Bourguignon
-\choeur{Et je suis fier, et je suis fier}
-\choeur{Et je suis fier, d'être Bourguignon} {bis}
+[Et je suis fier, et je suis fier]
+[Et je suis fier, d'être Bourguignon] {bis}
 
 Au sein d'une vigne
 J'ai reçu le jour

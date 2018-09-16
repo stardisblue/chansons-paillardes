@@ -32,7 +32,6 @@ ready(function () {
             .replace(/\\sauterLigne{(\d+)}/g, (ignore, nb: number) => {
                 return '<br/>'.repeat(nb - 1)
             })
-            .replace(/\\choeur{([^}]+)}/g, '[$1]')
             .replace(/\\vspace{([^}]+)}<br \/>/g, '<br style="display: block; margin: $1; line-height: 0px; content: \' \';" />')
         
         console.log(chanson.title)
