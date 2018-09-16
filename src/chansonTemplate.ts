@@ -5,7 +5,7 @@ import 'moment/locale/fr';
 
 moment.locale('fr')
 export default function (chanson) {
-    const { title, author, url, content, date, colonnes, parskip } = chanson
+    const { title, author, url, slug, content, date, colonnes, parskip } = chanson
 
     const section = document.createElement('section')
     section.classList.add('ma4--np')
@@ -13,6 +13,7 @@ export default function (chanson) {
     const h1 = document.createElement('h1')
     h1.classList.add('small-caps')
     h1.innerHTML = title
+    h1.id = slug
     section.appendChild(h1)
 
     const p = document.createElement('p')
@@ -34,7 +35,7 @@ export default function (chanson) {
     }
 
     const permalien = document.createElement('a')
-    permalien.href = url
+    permalien.href = '#' + slug
     permalien.innerHTML = 'permalien'
     p.appendChild(permalien)
 

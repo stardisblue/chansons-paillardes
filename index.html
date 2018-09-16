@@ -15,6 +15,7 @@ title: json
             title: {{ chanson.title | jsonify }},
             author: {{ chanson.author | jsonify }},
             url: {{ site.url | append: chanson.url | jsonify }},
+            slug: {{ chanson.url | split: "/" | last | slugify: 'latin' | jsonify }},
             content: {{ chanson.content | jsonify }},
             colonnes: {{ chanson.colonnes | jsonify }},
             date: {{ chanson.date | date_to_xmlschema | jsonify }},

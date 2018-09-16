@@ -16,6 +16,7 @@ interface Chanson {
     author?: string
     date?: string
     url?: string
+    slug?: string
     colonnes?: number
     parskip?: string
 }
