@@ -50,7 +50,7 @@ Chez nous le gazon, c’est une coutume
 Mon papa fait le terreau,
 Ma maman c’est la pelouse,
 Et le curé la broute…
-\vspace*{1em}
+
 Chez nous les HLM, c’est une coutume
 Mon papa fait le concierge,
 Ma maman l’appartement,
@@ -129,7 +129,7 @@ Le curé la culbute…
 Chez nous la chasse, c’est une coutume
 Mon papa c’est le faisan,
 Ma maman c’est la bécasse,
-Et le curé la plombe…\vspace{10mm}
+Et le curé la plombe…
 
 Chez nous couper du bois, c’est une coutume
 Mon papa fait le billot,
