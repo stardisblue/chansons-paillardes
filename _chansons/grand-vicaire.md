@@ -1,7 +1,7 @@
 ---
 title: Le Grand Vicaire
 colonnes: 2
-parskip: 5mm
+parskip: 4
 ---
 Chez nous l'jardinage, c’est une coutume
 Mon papa fait la charrue,
