@@ -41,7 +41,6 @@ Amis de l'ivrogne
 Réclamez vos droits
 Devant la Bourgogne
 Saluez trois fois.
-\colonneSuivante
 
 \sauterLigne{6}
 *Refrain*

@@ -21,22 +21,23 @@ interface Chanson {
     parskip?: string
 }
 
-ready(function () {
-    const chansons: Chanson[] = window.chansons || []
+// ready(function () {
+const chansons: Chanson[] = window.chansons || []
 
-    const main = document.querySelector('main')
+const main = document.querySelector('main')
 
-    forEach(chansons, (chanson) => {
+forEach(chansons, (chanson) => {
 
-        chanson.content = chanson.content
-            .replace(/\\colonneSuivante/g, '<div class="colonne-suivante"></div>')
-            .replace(/\\sauterLigne{(\d+)}/g, (ignore, nb: number) => {
-                return '<br/>'.repeat(nb - 1)
-            })
-            .replace(/\\vspace{([^}]+)}<br \/>/g, '<br style="display: block; margin: $1; line-height: 0px; content: \' \';" />')
-        
-        console.log(chanson.title)
+    chanson.content = chanson.content
+        // might break stuff when printing
+        .replace(/\\colonneSuivante/g, '<div class="colonne-suivante"></div>')
+        .replace(/\\sauterLigne{(\d+)}/g, (ignore, nb: number) => {
+            return '<br/>'.repeat(nb - 1)
+        })
+        .replace(/\\vspace{([^}]+)}<br \/>/g, '<br style="display: block; margin: $1; line-height: 0px; content: \' \';" />')
 
-        main.appendChild(chansonTemplate(chanson))
-    })
+    console.log(chanson.title)
+
+    main.appendChild(chansonTemplate(chanson))
 })
+// })

@@ -41,11 +41,8 @@ section:last-child { page-break-after: avoid; }
 
 .colonne-suivante {
   break-after: column;
-  /* Pour Firefox : */
-  // page-break-after: column ;
-  /* Pour WebKit : */
-  // causes tearing when printing
-  // -webkit-column-break-after: always;
+  -webkit-break-after: column;
+  -webkit-column-break-after: always;
 }
 
 @media print{
@@ -55,6 +52,13 @@ section:last-child { page-break-after: avoid; }
     margin: 1.5cm;
   }
 
+
+  p{
+    break-inside: avoid;
+    page-break-inside: avoid;
+    -webkit-break-inside: avoid;
+    -webkit-column-break-inside: avoid
+  }
 
   .mv4--np{
     margin-bottom: 0;

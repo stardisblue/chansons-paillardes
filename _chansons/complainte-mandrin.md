@@ -37,8 +37,6 @@ Ils m'avaient rien, vous m'entendez,
 J'les vendis bon marché
 Ils m'avaient rien coûté.
 
-\colonneSuivante
-
 Ces messieurs de Grenoble
 Avec leurs longues robes
 Et leurs bonnets carrés

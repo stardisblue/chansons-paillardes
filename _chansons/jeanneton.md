@@ -32,8 +32,6 @@ La rirette, la rirette,
 Ce que fit le quatrième,
 N'est pas dit dans la chanson (à poil!){bis}
 
-\colonneSuivante
-
 Si vous le saviez mesdames,
 La rirette, la rirette,
 Si vous le saviez mesdames,
