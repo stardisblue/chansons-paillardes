@@ -40,8 +40,6 @@ export default function (chanson) {
     p.appendChild(permalien)
 
     const article = document.createElement('article')
-    article.style.columnCount = colonnes
-    article.style.webkitColumnCount = colonnes
     
     article.classList.add('mv4--np')
     if (parskip) {

@@ -23,9 +23,18 @@ article{
     box-sizing: border-box;
   }
 
-  p:first-child{
-    margin-top: 0
+  .container{
+    padding-bottom: 1em;
+    border-bottom: 1px solid gray
   }
+
+  .container:last-child {
+    border-bottom: none;
+  }
+
+  // p:first-child{
+  //   margin-top: 0
+  // }
 }
 
 
@@ -50,6 +59,10 @@ section:last-child { page-break-after: avoid; }
   @page {
     size: A4;
     margin: 1.5cm;
+
+    @bottom-center{
+      content: counter(page)
+    }
   }
 
 
@@ -58,6 +71,13 @@ section:last-child { page-break-after: avoid; }
     page-break-inside: avoid;
     -webkit-break-inside: avoid;
     -webkit-column-break-inside: avoid
+  }
+
+  article .container{
+    padding-bottom: none;
+    border-bottom: none;
+    break-after: always;
+    -webkit-break-after: always;
   }
 
   .mv4--np{
