@@ -21,6 +21,6 @@ contenu
 
 ### Commandes spécifiques au paroles
 
-- `\colonneSuivante` : force la suite des paroles sur la colonne suivante (utilisation déconseillé, peut entrainer des erreurs lors de l'impression)
+- `\colonneSuivante` : [:warning: NE MARCHE PAS] force la suite des paroles sur la colonne suivante (utilisation déconseillé, peut entrainer des erreurs lors de l'impression)
 - `\sauterLigne{10}` : saute `n` ligne (de 1 a 20)
 - `\vspace{2em}` : ajoute un interligne de valeur `2em` (cm, px, em ...)
