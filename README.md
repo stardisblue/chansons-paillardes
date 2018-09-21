@@ -12,7 +12,7 @@ Chaque fichier (`markdown`, `html`) doit posseder une entête :
 ```yml
 ---
 title: Titre de la chanson
-author: Autheur (facultatif) 
+author: Auteur (facultatif) 
 parskip: 5 (facultatif) Espacement interparagraphe (1= 0.5em, chaque pas vaut 0.25em jusqu'à 5em (19))
 colonnes: 1 (facultatif) nombre de colonnes
 ---

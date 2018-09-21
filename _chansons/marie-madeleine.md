@@ -134,8 +134,8 @@ Eeeeet les pieds d' cochon!
 
 *Refrain*
 
-Madeleine a un \oe il de verre.
-Un \oe il de verre! {bis}
+Madeleine a un &oelig;il de verre.
+Un &oelig;il de verre! {bis}
 Le nez crochu! {bis}
 Les dents pourries! {bis}
 L' menton pointu! {bis}
@@ -153,7 +153,7 @@ Eeeeet les pieds d' cochon!
 
 Madeleine a de faux cheveux.
 De faux cheveux! {bis}
-Un \oe il de verre! {bis}
+Un &oelig;il de verre! {bis}
 Le nez crochu! {bis}
 Les dents pourries! {bis}
 L' menton pointu! {bis}
@@ -172,7 +172,7 @@ Eeeeet les pieds d' cochon!
 Mais Madeleine c'est la femme que j'aime.
 La femme que j'aime! {bis}
 De faux cheveux! {bis}
-Un \oe il de verre! {bis}
+Un &oelig;il de verre! {bis}
 Le nez crochu! {bis}
 Les dents pourries! {bis}
 L' menton pointu! {bis}

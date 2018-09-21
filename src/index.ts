@@ -25,12 +25,13 @@ interface Chanson {
 const chansons: Chanson[] = window.chansons || []
 
 const main = document.querySelector('main');
-const ulElement = main.getElementsByTagName('nav')[0].getElementsByTagName('ul')[0];
+const ulElement = document.querySelector('nav ul');
+
 
 (function buildMenu(chansons) {
     forEach(chansons, (chanson) => {
         const itemElement = document.createElement('li')
-        itemElement.classList.add('cf')
+        itemElement.classList.add('cf', 'mv2')
 
         const urlElement = document.createElement('a')
         urlElement.classList.add('fl')
@@ -39,6 +40,8 @@ const ulElement = main.getElementsByTagName('nav')[0].getElementsByTagName('ul')
         itemElement.appendChild(urlElement)
         ulElement.appendChild(itemElement)
     })
+
+    main.appendChild(createFooter(1))
 })(chansons);
 
 const pages = [];
@@ -58,13 +61,14 @@ const pages = [];
         main.appendChild(chansonDOM);
         pages.push(pageNumber)
 
-        const articleDOM = chansonDOM.children[2]
+        const articleElement = chansonDOM.children[2] as HTMLElement
 
         const cols = chanson.colonnes || 1
 
         if (cols === 1) {
-            articleDOM.appendChild(createFooter(pageNumber))
+            articleElement.appendChild(createFooter(pageNumber))
             pageNumber++
+            articleElement.style.width = null
             return
         }
 
@@ -75,15 +79,16 @@ const pages = [];
             pages: 1000,
             current: 0,
             currentPage: 0,
-            optimal: articleDOM.offsetHeight / cols
+            optimal: articleElement.offsetHeight / cols
         }
 
         // creating the cells
         const cells = []
         let cell = []
-        forEach(articleDOM.children, (pDOM: HTMLElement) => {
+
+        forEach(articleElement.children, (pElement: HTMLParagraphElement) => {
             if (cells.length % cols === 0) { // update optimal on next pages
-                h.optimal = (articleDOM.offsetHeight - h.currentPage) / cols
+                h.optimal = (articleElement.offsetHeight - h.currentPage) / cols
                 // console.log(optimal)
             }
             if (h.current > h.optimal) { // optimal breakpoint
@@ -93,8 +98,8 @@ const pages = [];
                 h.current = 0
             }
 
-            const style = pDOM.currentStyle || window.getComputedStyle(pDOM)
-            const height = pDOM.offsetHeight + parseInt(style.marginTop) + parseInt(style.marginBottom)
+            const style = pElement.currentStyle || window.getComputedStyle(pElement)
+            const height = pElement.offsetHeight + parseInt(style.marginTop) + parseInt(style.marginBottom)
             const futureCount = h.current + height
 
             if ((futureCount > h.firstPage && cells.length < cols) ||
@@ -107,7 +112,7 @@ const pages = [];
             }
             h.current += height
 
-            cell.push(pDOM)
+            cell.push(pElement)
         })
         if (cell.length !== 0) {// checking if lastcell is not empty
             cells.push(cell)
@@ -134,15 +139,16 @@ const pages = [];
             if ((index + 1) % cols === 0) {
                 container.appendChild(createFooter(pageNumber))
                 pageNumber++
-                articleDOM.appendChild(container)
+                articleElement.appendChild(container)
                 container = createContainerElement()
             }
         })
         if (container.children.length !== 0) {
             container.appendChild(createFooter(pageNumber))
             pageNumber++
-            articleDOM.appendChild(container)
+            articleElement.appendChild(container)
         }
+        articleElement.style.width = null
     });
 
     // ---
@@ -157,32 +163,54 @@ const pages = [];
         li.appendChild(p)
     })
 
-    /* - helper functions - */
-    function createContainerElement(): HTMLDivElement {
-        const container = document.createElement('div');
-        container.classList.add('container', 'cf', 'ph2-ns')
-        return container
-    }
 
-    function createCellElement(cols): HTMLDivElement {
-        const cell = document.createElement('div')
-        const percentage = cols !== 3 ? 100 / cols : 'third'
-        cell.classList.add('fl', 'w-100', 'w-' + percentage + '-ns', 'ph1')
-        return cell
-    }
 
-    function createFooter(page: number): HTMLDivElement {
-        const div = document.createElement('div')
-        div.classList.add('footer', 'print')
-        div.innerHTML = page
-        div.style.bottom = ((page - 1) * -100) + 'vh'
-        return div
-    }
 })(chansons);
+
+/* - helper functions - */
+function createContainerElement(): HTMLDivElement {
+    const container = document.createElement('div');
+    container.classList.add('page', 'cf', 'ph2-ns', 'pb15-ns', 'pb0-p', 'bb-ns-nl', 'b--gray')
+    return container
+}
+
+function createCellElement(cols): HTMLDivElement {
+    const cell = document.createElement('div')
+    const percentage = cols !== 3 ? 100 / cols : 'third'
+    cell.classList.add('fl', 'w-100', 'w-' + percentage + '-ns', 'w-' + percentage + '-p', 'ph1')
+    return cell
+}
+
+function createFooter(page: number): HTMLDivElement {
+    const div = document.createElement('div')
+    div.classList.add('footer', 'print')
+    div.innerHTML = '' + page
+    div.style.bottom = (((page - 1) * -27.2) + 0.01) + 'cm'
+    return div
+}
 
 // console.log(pages)
 
 // })
 
 
+//javascript file
+
+
+document.getElementById('hamburger').addEventListener('click', event => {
+
+    let sidebar = document.getElementById('sidebar')
+    let hamburger = document.getElementById('hamburger')
+    let sidebarWidth = sidebar.getBoundingClientRect().width
+
+    event.preventDefault()
+    sidebar.classList.toggle('transform-off')
+
+    hamburger.style.transform = hamburger.style.transform ? '' : 'translate3d(-' + sidebarWidth + 'px, 0, 0)'
+})
+
+document.getElementById('main').addEventListener('click', event => {
+    document.getElementById('hamburger').style.transform = ''
+    document.getElementById('sidebar').classList.add('transform-off')
+})
 

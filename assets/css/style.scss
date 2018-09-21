@@ -1,23 +1,12 @@
 ---
 ---
+.anchor:target {
+  padding-top: 2em;
+  margin-top: -2em;
+}
+
 .print{
   display: none
-}
-
-
-@for $i from 1 to 20 {
-  .bl-#{$i}{
-    margin-bottom: #{$i}em;
-  }
-}
-
-.ma4--np{
-  margin: 2rem
-}
-
-.mv4--np{
-  margin-bottom: 2rem;
-  margin-top: 2rem
 }
 
 .footer {
@@ -27,62 +16,40 @@
   right: 0
 }
 
-
-article{
-  p{
-    margin-top: 1.5em;
-    margin-bottom: 0;
-    box-sizing: border-box;
-  }
-
-  .container{
-    padding-bottom: 1em;
-    border-bottom: 1px solid gray;
-
-    // > div > p:first-child{
-    //   margin-top: 0
-    // }
-  }
-
-  .container:last-child {
-    border-bottom: none;
-  }
+article  p{
+  margin-top: 1.5em;
+  margin-bottom: 0;
+  box-sizing: border-box;
 }
 
-
+/* parskip options */
 @for $i from 1 to 20 {
   .p-mt#{$i} p{
     margin-top: #{($i * .25)+0.25}em;
   }
 }
 
-section { page-break-after: always; }
-
-section:last-child { page-break-after: avoid; }
-
+// unused but still here for retro-compat
 .colonne-suivante {
   break-after: column;
   -webkit-break-after: column;
   -webkit-column-break-after: always;
 }
 
-@media print{
 
+/* Print properties */
+@media print{
+  /* HardCoded values */
   @page {
     size: A4;
-    margin: 1.5cm 1.5cm 1cm 1.5cm;
-
-    @bottom-center{
-      content: counter(page)
-    }
+    margin-top: 1.5cm;
+    margin-right: 1.5cm;
+    margin-bottom: 1cm;
+    margin-left: 1.5cm;
   }
 
-  .w-50-ns {
-    width: 50%;
-  }
-
-  .print {
-    display: block;
+  .f20-p{
+    font-size: 2em;
   }
 
   p{
@@ -92,21 +59,110 @@ section:last-child { page-break-after: avoid; }
     -webkit-column-break-inside: avoid
   }
 
-  nav, article .container{
-    padding-bottom: 0;
-    border-bottom: none;
-    page-break-after: always;
-    break-after: always;
-    -webkit-break-after: always;
-
+  /* View Height */
+  .vh-100-p{
+    height: 100vh;
   }
 
-  .mv4--np{
+  /* paddings */
+  .pb0-p{
+    padding-bottom: 0;
+  }
+
+  .pa0-p{
+    padding:0;
+  }
+
+  /* margins */
+  .ma0-p{
+    margin:0
+  }
+
+  .mv0-p{
     margin-bottom: 0;
     margin-top: 0
   }
 
-  .ma4--np{
-    margin:0
+  /* Printable */
+  .print {
+    display: block;
+  }
+
+  .no-print{
+    display:none;
+  }
+
+  /* New page after this element*/
+  .page{
+    break-before: page;
+    page-break-before: page;
+    -webkit-break-before: page;
+  }
+
+  .page:first-child{
+    break-before: avoid;
+    page-break-before: avoid;  
+    -webkit-break-before: avoid;
+  }
+}
+
+@media print{
+  .w1-p {  width: 1rem; }
+  .w2-p {  width: 2rem; }
+  .w3-p {  width: 4rem; }
+  .w4-p {  width: 8rem; }
+  .w5-p {  width: 16rem; }
+  .w-10-p { width:  10%; }
+  .w-20-p { width:  20%; }
+  .w-25-p { width:  25%; }
+  .w-30-p { width:  30%; }
+  .w-33-p { width:  33%; }
+  .w-34-p { width:  34%; }
+  .w-40-p { width:  40%; }
+  .w-50-p { width:  50%; }
+  .w-60-p { width:  60%; }
+  .w-70-p { width:  70%; }
+  .w-75-p { width:  75%; }
+  .w-80-p { width:  80%; }
+  .w-90-p { width:  90%; }
+  .w-100-p { width: 100%; }
+  .w-third-p { width: calc(100% / 3); }
+  .w-two-thirds-p { width: calc(100% / 1.5); }
+  .w-auto-p { width: auto; }
+}
+
+@media print{
+  .relative-p{
+    position: relative;
+  }
+}
+
+@media print{
+  .h-auto-p{
+    height: auto;
+  }
+}
+
+@media screen and (min-width: 30em){
+  .pb15-ns{
+    padding-bottom: 1.5em;
+  }
+
+  .bb-ns-nl{
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+  }
+
+  .bb-ns-nl:last-child{
+    border-bottom: none;
+  }
+}
+
+@media screen{
+  .transition-transform { 
+    transition: transform 0.3s ease-in-out;
+  }
+  .transform-off { 
+    transform: translate3d( 100%, 0, 0 );
   }
 }

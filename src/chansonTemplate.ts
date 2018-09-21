@@ -8,10 +8,10 @@ export default function (chanson) {
     const { title, author, url, slug, content, date, colonnes, parskip } = chanson
 
     const section = document.createElement('section')
-    section.classList.add('ma4--np')
+    section.classList.add('ma4', 'ma0-p', 'page')
 
     const h1 = document.createElement('h1')
-    h1.classList.add('small-caps')
+    h1.classList.add('small-caps', 'anchor')
     h1.innerHTML = title
     h1.id = slug
     section.appendChild(h1)
@@ -40,13 +40,13 @@ export default function (chanson) {
     p.appendChild(permalien)
 
     const article = document.createElement('article')
-    
-    article.classList.add('mv4--np')
+
+    article.classList.add('mv4', 'mv0-p')
+    article.style.width = 18 / (chanson.colonnes || 1) + 'cm'
     if (parskip) {
         article.classList.add('p-mt' + parskip)
     }
     article.innerHTML = content
     section.appendChild(article)
-
     return section
 }
