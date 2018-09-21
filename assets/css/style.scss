@@ -95,13 +95,13 @@ article  p{
   /* New page after this element*/
   .page{
     break-before: page;
-    page-break-before: page;
+    page-break-before: always;
     -webkit-break-before: page;
   }
 
   .page:first-child{
     break-before: avoid;
-    page-break-before: avoid;  
+    page-break-before: always;
     -webkit-break-before: avoid;
   }
 }
