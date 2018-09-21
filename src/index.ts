@@ -198,19 +198,25 @@ function createFooter(page: number): HTMLDivElement {
 
 
 document.getElementById('hamburger').addEventListener('click', event => {
-
-    let sidebar = document.getElementById('sidebar')
-    let hamburger = document.getElementById('hamburger')
-    let sidebarWidth = sidebar.getBoundingClientRect().width
-
     event.preventDefault()
+    
+    const sidebar = document.getElementById('sidebar')
+    const sidebarWidth = sidebar.getBoundingClientRect().width
+
+    const header = document.querySelector('nav div')
+    const marginLeft = parseInt((header.currentStyle || window.getComputedStyle(header)).marginLeft)
+
     sidebar.classList.toggle('transform-off')
 
-    hamburger.style.transform = hamburger.style.transform ? '' : 'translate3d(-' + sidebarWidth + 'px, 0, 0)'
+    const hamburger = document.getElementById('hamburger')
+    hamburger.style.transform = hamburger.style.transform && (sidebarWidth - marginLeft) > 0 ? '' : 'translate3d(-' + (sidebarWidth - marginLeft) + 'px, 0, 0)'
 })
 
-document.getElementById('main').addEventListener('click', event => {
+document.getElementById('main').addEventListener('click', outsideClick)
+document.getElementById('header').addEventListener('click', outsideClick)
+
+function outsideClick(event) {
+    console.log('event')
     document.getElementById('hamburger').style.transform = ''
     document.getElementById('sidebar').classList.add('transform-off')
-})
-
+} 
