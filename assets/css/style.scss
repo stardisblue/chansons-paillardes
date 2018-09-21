@@ -1,5 +1,9 @@
 ---
 ---
+.print{
+  display: none
+}
+
 
 @for $i from 1 to 20 {
   .bl-#{$i}{
@@ -16,6 +20,14 @@
   margin-top: 2rem
 }
 
+.footer {
+  position: absolute;
+  align-content: center;
+  left: 0;
+  right: 0
+}
+
+
 article{
   p{
     margin-top: 1.5em;
@@ -25,16 +37,16 @@ article{
 
   .container{
     padding-bottom: 1em;
-    border-bottom: 1px solid gray
+    border-bottom: 1px solid gray;
+
+    // > div > p:first-child{
+    //   margin-top: 0
+    // }
   }
 
   .container:last-child {
     border-bottom: none;
   }
-
-  // p:first-child{
-  //   margin-top: 0
-  // }
 }
 
 
@@ -58,13 +70,20 @@ section:last-child { page-break-after: avoid; }
 
   @page {
     size: A4;
-    margin: 1.5cm;
+    margin: 1.5cm 1.5cm 1cm 1.5cm;
 
     @bottom-center{
       content: counter(page)
     }
   }
 
+  .w-50-ns {
+    width: 50%;
+  }
+
+  .print {
+    display: block;
+  }
 
   p{
     break-inside: avoid;
@@ -73,11 +92,13 @@ section:last-child { page-break-after: avoid; }
     -webkit-column-break-inside: avoid
   }
 
-  article .container{
-    padding-bottom: none;
+  nav, article .container{
+    padding-bottom: 0;
     border-bottom: none;
+    page-break-after: always;
     break-after: always;
     -webkit-break-after: always;
+
   }
 
   .mv4--np{
