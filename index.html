@@ -19,9 +19,19 @@ title: json
         }{% unless forloop.last %}, {% endunless %}{% endfor %}
     ]
 </script>
+<div id="navbar" class="tc page fixed top-0 left-0 right-0 bg-white z-9999 shadow-4 no-print">
+    <div class="flex justify-between mw8 center">
+        <a class="link dark-gray hover-gray no-underline flex items-center pa3 f4" href="#">
+            Cantonnier
+        </a>
+        <div class="flex pa3 items-center transition-transform" id="hamburger">
+            <a class="f4 link dib dark-gray dim rotate-90" href="#">|||</a>
+        </div>
+    </div>
+</div>
 <header id="header" class="vh-50 vh-100-p dt w-100">
     <div class="dtc v-mid tc bg-yellow">
-        <h1 class="f-headline "><a class="link black" href="#">Cantonnier</a></h1>
+        <h1 class="f1 f-headline "><a class="link black" href="#">Cantonnier</a></h1>
         <h2 class="f5 normal">Un recueil de paillardes et autres chansons entrainantes de la jeunesse estudiantine
             française.<br />
             À l'initiative de <em>Lavabo</em>.<br />
@@ -29,20 +39,10 @@ title: json
         <h3 class="f6">Auteur : <span class="normal i">MACFoyzy Jr</span></h3>
     </div>
 </header>
-<nav class="tc page pb-0-p  h-auto-p fixed relative-p top-0 left-0 right-0 bg-white shadow-4-ns">
-    <div class="flex justify-between mw8 center">
-        <a class="link dark-gray hover-gray no-underline flex items-center pa3 f4 no-print" href="#">
-            Cantonnier
-        </a>
-        <div class="flex pa3 items-center transition-transform no-print" id="hamburger">
-            <a class="f4 link dib dark-gray dim rotate-90" href="#">|||</a>
-        </div>
-        <div class=" pa4 w5 w-100-p pa0-p items-center h-100 h-auto-p fixed relative-p top-0 right-0 transition-transform bg-white transform-off shadow-4-ns "
-            id="sidebar">
-            <h1 class="f4 f20-p">Table des Matières</h1>
-            <ul class="ma0 pa0 tl list small-caps"></ul>
-        </div>
-    </div>
+<nav class=" ph4 pt5 w5 w-100-p pa0-p h-100 h-auto-p fixed relative-p top-0 right-0 transition-transform bg-white transform-off shadow-4-ns z-999"
+id="sidebar">
+    <h1 class="f4 f-2-p print tc">Table des Matières</h1>
+    <ul class="ma0 pa0 tl list small-caps"></ul>
 </nav>
 <main id="main" class="mw8 center tc" role="main">
 </main>

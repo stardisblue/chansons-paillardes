@@ -203,7 +203,7 @@ document.getElementById('hamburger').addEventListener('click', event => {
     const sidebar = document.getElementById('sidebar')
     const sidebarWidth = sidebar.getBoundingClientRect().width
 
-    const header = document.querySelector('nav div')
+    const header = document.getElementById('navbar').querySelector('div')
     const marginLeft = parseInt((header.currentStyle || window.getComputedStyle(header)).marginLeft)
 
     sidebar.classList.toggle('transform-off')
