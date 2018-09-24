@@ -9,6 +9,7 @@ export default function (chanson) {
 
     const section = document.createElement('section')
     section.classList.add('ma4', 'ma0-p', 'page')
+    section.id = 'parent--' + slug
 
     const h1 = document.createElement('h1')
     h1.classList.add('small-caps', 'anchor')

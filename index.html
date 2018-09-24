@@ -24,6 +24,11 @@ title: json
         <a class="link dark-gray hover-gray no-underline flex items-center pa3 f4" href="#">
             Cantonnier
         </a>
+        <div class="pa2 flex-auto items-center relative">
+            <input class="pa2 b--light-gray b--solid br-pill w-100 relative" type="text" name="search" id="searchbar"
+                placeholder="Rechercher une chanson">
+            <a id="clean-search" class="link absolute code b f3 gray bottom-1 right-1-5" href="#">&times;</span>
+        </div>
         <div class="flex pa3 items-center transition-transform" id="hamburger">
             <a class="f4 link dib dark-gray dim rotate-90" href="#">|||</a>
         </div>
@@ -42,7 +47,11 @@ title: json
 <nav class=" ph4 pt5 w5 w-100-p pa0-p h-100 h-auto-p fixed relative-p top-0 right-0 transition-transform bg-white transform-off shadow-4-ns z-999"
 id="sidebar">
     <h1 class="f4 f-2-p print tc">Table des Matières</h1>
-    <ul class="ma0 pa0 tl list small-caps"></ul>
+    <div id="nav-no-results" class="tc mv2 dn gray">Aucun Résultat</div>
+    <ul class="ma0 pa0 tl list small-caps">
+    </ul>
 </nav>
+<div class="page"></div>
 <main id="main" class="mw8 center tc" role="main">
 </main>
+<footer id="footer" class="print tc"></footer>
