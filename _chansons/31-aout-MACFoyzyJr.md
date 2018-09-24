@@ -3,7 +3,7 @@ title: Le 31 du mois d'août
 author: Version MACFoyzyJr
 colonnes: 2
 ---
-Au trente et un du mois d'août {bis} 
+Au trente et un du mois d'août {bis}  
 Nous vîmes venir sous l'vent à nous {bis}  
 Une frégate d'Angleterre  
 Qui fendait la mer z'et les flots  
