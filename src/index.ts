@@ -212,7 +212,6 @@ const $footer = document.getElementById('footer');
                 results = []
                 return false
             }
-
             if (results === undefined) {
                 results = filtered
                 return
