@@ -3,7 +3,6 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: default
-title: json
 ---
 <script>
     window.chansons = [
@@ -22,11 +21,10 @@ title: json
 <div id="navbar" class="tc page fixed top-0 left-0 right-0 bg-white z-9999 shadow-4 no-print">
     <div class="flex justify-between mw8 center">
         <a class="link dark-gray hover-gray no-underline flex items-center pa3 f4" href="#">
-            Cantonnier
-        </a>
+            {{site.title}}</a>
         <div class="pa2 flex-auto items-center relative">
             <input class="pa2 b--light-gray b--solid br-pill w-100 relative" type="text" name="search" id="searchbar"
-                placeholder="Rechercher une chanson">
+                placeholder="Rechercher...">
             <a id="clean-search" class="link absolute code b f3 gray bottom-1 right-1-5 dim" href="#">&times;</a>
         </div>
         <div class="flex pa3 items-center transition-transform" id="hamburger">
@@ -36,7 +34,7 @@ title: json
 </div>
 <header id="header" class="vh-50 vh-100-p dt w-100">
     <div class="dtc v-mid tc bg-yellow">
-        <h1 class="f1 f-headline-ns "><a class="link black" href="#">Cantonnier</a></h1>
+        <h1 class="f1 f-headline-ns "><a class="link black" href="#">{{site.title}}</a></h1>
         <h2 class="f5 normal">Un recueil de paillardes et autres chansons entrainantes de la jeunesse estudiantine
             française.<br />
             À l'initiative de <em>Lavabo</em>.<br />
@@ -45,7 +43,7 @@ title: json
     </div>
 </header>
 <nav class=" ph4 pt5 w5 w-100-p pa0-p h-100 h-auto-p fixed relative-p top-0 right-0 transition-transform bg-white transform-off shadow-4-ns z-999"
-id="sidebar">
+    id="sidebar">
     <h1 class="f4 f-2-p print tc">Table des Matières</h1>
     <div id="nav-no-results" class="tc mv2 dn gray">Aucun Résultat</div>
     <ul class="ma0 pa0 tl list small-caps">
