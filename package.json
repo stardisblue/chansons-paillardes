@@ -10,7 +10,7 @@
     "build": "parcel build src/index.ts -d assets/js"
   },
   "devDependencies": {
-    "parcel-bundler": "^1.9.7",
+    "parcel-bundler": "^1.12.3",
     "typescript": "^3.0.3",
     "tslint": "^5.11.0"
   },
