@@ -15,7 +15,7 @@
     "tslint": "^5.17.0"
   },
   "dependencies": {
-    "@types/lodash": "^4.14.133",
+    "@types/lodash": "^4.14.135",
     "lodash": "^4.17.11",
     "moment": "^2.24.0",
     "pug": "^2.0.3"
