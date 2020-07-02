@@ -11,7 +11,7 @@
   },
   "devDependencies": {
     "parcel-bundler": "^1.10.0",
-    "typescript": "^3.5.1",
+    "typescript": "^3.9.6",
     "tslint": "^5.18.0"
   },
   "dependencies": {
