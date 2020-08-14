@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "@types/lodash": "^4.14.133",
-    "lodash": "^4.17.11",
+    "lodash": "^4.17.20",
     "moment": "^2.24.0",
     "pug": "^2.0.4"
   }
